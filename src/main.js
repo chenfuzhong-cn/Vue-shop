@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import element from 'element-ui'
+import Axios from '@/assets/js/axios'
 import 'element-ui/lib/theme-chalk/index.css'
-import Axios from './assets/js/axios'
+import '@/assets/css/global.css'
+import '@/assets/fonts/iconfont.css'
 
 Vue.use(Axios)
 Vue.use(element)

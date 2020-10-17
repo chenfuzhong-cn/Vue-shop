@@ -1,0 +1,6 @@
+/* 全局样式表 */
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(38,74,107);
+}
