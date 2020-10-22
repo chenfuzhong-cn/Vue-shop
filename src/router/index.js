@@ -3,12 +3,13 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const router = (path,name,file,children) => {
+const router = (path,name,file,redirect,children) => {
     return {
        path,
        name,
        component: () => import(`@/components/${file}`),
-       children
+       children,
+       redirect
     }
 }
 
@@ -18,12 +19,20 @@ const route =  new Router({
     {
       path: '/',
       redirect: '/login',
-      children: [
-        
-      ]
+      children: []
     },
     router('/login','login','Login/login'),
-    router('/home','home','Home/home'),
+    /* 重定向要在子组件之前 */
+    router('/home','home','Home/home','/welcome',new Array(
+      /* 欢迎页 */
+      router('/welcome','welcome','Home/welcome'),
+      /* 用户列表 */
+      router('/users','users','User/users'),
+      /* 权限列表 */
+      router('/rights','rights','Rights/rights'),
+      /* 角色列表 */
+      router('/roles','roles','Rights/roles'),
+      ))
   ]
 })
 

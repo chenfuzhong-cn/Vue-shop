@@ -107,7 +107,7 @@ export default {
               /* 保存token */
               window.localStorage.setItem(
                 "token",
-                back.config.headers.Authorization
+                data.token
               );
 
               /* 编程式导航 */
