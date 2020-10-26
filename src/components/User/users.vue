@@ -92,7 +92,6 @@ export default {
         method: 'get',
         data: this.queryInfo
       }).then(back => {
-        console.log(back)
         let {data,meta} = back.data;
         if (meta.status !== 200) return this.$message.error('获取用户列表失败');
         this.userList = data;

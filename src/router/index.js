@@ -8,8 +8,8 @@ const router = (path,name,file,redirect,children) => {
        path,
        name,
        component: () => import(`@/components/${file}`),
+       redirect,
        children,
-       redirect
     }
 }
 
