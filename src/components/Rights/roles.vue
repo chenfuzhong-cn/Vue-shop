@@ -147,7 +147,7 @@ export default {
    data() {
      return {
       /* 角色列表 */
-      listRoles: [],
+      listRoles: [], 
       /* 添加角色 */
       addRoleShow: false,
       labelPosition: 'right',

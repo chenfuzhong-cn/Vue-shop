@@ -4,7 +4,7 @@ html,body {
     width: 100%;
     min-width: 1366px;
     background-color: rgb(38,74,107);
-}
+} 
 .el-breadcrumb {
     margin-bottom: 15px;
     font-size: 15px;
