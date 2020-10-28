@@ -32,6 +32,12 @@ const route =  new Router({
       router('/rights','rights','Rights/rights'),
       /* 角色列表 */
       router('/roles','roles','Rights/roles'),
+      /* 商品分类 */
+      router('/categories','categories','Goods/categories'),
+      /* 商品列表 */
+      router('/goods','goods','Goods/goods'),
+      /* 商品参数 */
+      router('/params','params','Goods/params')
       ))
   ]
 })
